@@ -123,6 +123,16 @@ p {
   background: var(--color-dark-main);
 }
 
+/* Toggle btn */
+.navbar__toggle-btn {
+  position: absolute;
+  top: 24px;
+  right: 32px;
+  font-size: 24px;
+  color: var(--color-white);
+  display: none;
+}
+
 /* Home */
 #home {
   background: url(images/home-background.png) center/cover no-repeat;
@@ -149,6 +159,9 @@ p {
   border: 2px solid var(--color-white);
   border-radius: var(--size-border-radius);
 }
+.home__btn:hover {
+  background-color: var(--color-dark-main);
+}
 
 /* Section Common */
 .section {
@@ -162,6 +175,52 @@ p {
 }
 
 /* About */
+#about h1 {
+  margin-bottom: 40px;
+}
+.about__container {
+  position: relative;
+  background-color: var(--color-dark-main);
+  overflow: hidden;
+  height: 550px;
+}
+.about__description {
+  position: absolute;
+  top: 50%;
+  left: 100px;
+  transform: translateY(-50%);
+  display: flex;
+  max-width: 400px;
+  padding: 10px 0 10px 50px;
+  text-align: left;
+  color: var(--color-white);
+  position: relative;
+  background-color: var(--color-main);
+}
+.about__description ul {
+  margin-right: 40px;
+}
+.about__description li {
+  margin: 16px 0;
+}
+.description__contents {
+  font-size: var(--font-micro);
+  line-height: 24px;
+}
+.description__contents li {
+  margin-top: 16.5px;
+}
+.about__avatar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background-image: url(images/about-avatar.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 70% 100%;
+}
 .about__majors {
   display: flex;
   justify-content: space-between;
@@ -334,11 +393,13 @@ p {
   background-color: black;
   opacity: 0;
   transform: translateY(10px) scale(0.9);
-  transition: all var(--animation-duration) ease-in;
+  border-radius: 20px;
+  transition: all var(--animation-duration) ease-in-out;
 }
 .project:hover .project__description {
   opacity: 0.8;
   transform: translateY(0px) scale(1);
+  border-radius: 0;
 }
 .project__description h3 {
   color: var(--color-white);
@@ -388,4 +449,68 @@ p {
 }
 .testimonial__speech-bubble a {
   color: var(--color-main);
+}
+
+/* Contact */
+#contact {
+  background-color: var(--color-main);
+}
+.contact__title,
+.contact__email,
+.contact__right {
+  color: var(--color-white);
+}
+.contact__title {
+  margin: 32px 0;
+}
+.contact__links {
+  font-size: var(--font-large);
+  margin: 24px 0;
+  transition: all var(--animation-duration) ease-in;
+}
+.contact__links i:hover {
+  transform: scale(1.1);
+  color: var(--color-orange);
+}
+.contact__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact__moon {
+  width: 50px;
+}
+
+/* For below 768px screen width */
+@media screen and (max-width: 768px) {
+  .navbar__toggle-btn {
+    display: block;
+  }
+  #navbar {
+    flex-direction: column;
+  }
+  .navbar__menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 1625px) {
+  .about__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: ;
+  }
+  .about__description {
+    left: 0;
+    top: 50%;
+    z-index: 1;
+  }
+  .about__avatar {
+    width: 100%;
+    height: 100%;
+    background-position: center 100%;
+  }
 }
