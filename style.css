@@ -94,12 +94,19 @@ p {
 
 /* Navbar */
 #navbar {
+  position: fixed;
+  z-index: 10;
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  background-color: var(--color-main);
+  background-color: transparent;
   align-items: center;
   color: var(--color-white);
   padding: 16px;
+  transition: all var(--animation-duration) ease-in-out;
+}
+#navbar.navbar--bg {
+  background-color: var(--color-main);
 }
 .navbar__logo {
   font-size: var(--font-medium);
@@ -137,6 +144,7 @@ p {
 #home {
   background: url(images/home-background.png) center/cover no-repeat;
   padding: 40px;
+  padding-top: 100px;
   text-align: center;
 }
 .home__avatar {
@@ -478,7 +486,8 @@ p {
   align-items: center;
 }
 .contact__moon {
-  width: 50px;
+  width: 30px;
+  margin-left: 10px;
 }
 
 /* For below 768px screen width */
