@@ -167,6 +167,19 @@ p {
   border: 2px solid var(--color-white);
   border-radius: var(--size-border-radius);
 }
+@keyframes chevron {
+  0% {
+    transform: translateY(-2px);
+  }
+  100% {
+    transform: translateY(1px);
+  }
+}
+.home__btn i {
+  font-size: var(--font-micro);
+  margin-left: 5px;
+  animation: chevron 0.5s alternate infinite;
+}
 .home__btn:hover {
   background-color: var(--color-dark-main);
 }
