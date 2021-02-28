@@ -38,6 +38,7 @@
 /* Universal tags */
 * {
   box-sizing: border-box;
+  letter-spacing: -0.25px;
 }
 body {
   margin: 0;
@@ -309,7 +310,7 @@ p {
   display: flex;
   background-color: var(--color-light-grey);
   color: var(--color-light-white);
-  margin: 20px 0;
+  margin: 20px 50px;
 }
 .skillset__title {
   color: var(--color-white);
@@ -387,6 +388,8 @@ p {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  max-width: 1200px;
+  margin: auto;
 }
 .project {
   position: relative;
@@ -443,36 +446,51 @@ p {
   overflow: hidden;
 }
 .testimonials {
-  margin: 40px;
+  display: flex;
+  justify-content: space-evenly;
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 75px;
+  gap: 10px;
+  background-color: var(--color-white);
 }
 .testimonial {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   margin: 32px 0;
+  padding: 15px 30px 20px;
+  border: 5px solid var(--color-main);
+  max-height: 515px;
+  max-width: 30%;
+  overflow-y: scroll;
+}
+.testimonial::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(124, 121, 121, 0.4);
+  border-radius: 6px;
+}
+.testimonial:hover::-webkit-scrollbar-thumb {
+  background: rgba(124, 121, 121, 0.8);
 }
 .testimonial__avatar {
-  width: 150px;
-  height: 150px;
-  margin-right: 40px;
-  border-radius: var(--size-border-radius);
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  margin: 5px 0;
 }
-.testimonial__speech-bubble {
-  padding: 18px;
-  background-color: var(--color-white);
-  border-radius: 20px;
-}
-.testimonial__speech-bubble:nth-child(odd) {
-  border-top-right-radius: 0;
-}
-.testimonial__speech-bubble:nth-child(even) {
-  border-top-left-radius: 0;
-}
-.testimonial__speech-bubble p {
+.testimonial p {
   color: var(--color-light-grey);
-}
-.testimonial__speech-bubble p:first-child {
+  font-size: var(--font-small);
+  word-break: break-word;
   text-align: left;
 }
-.testimonial__speech-bubble a {
+.summary {
+  font-weight: 600;
+}
+.testimonial a {
   color: var(--color-main);
 }
 
@@ -513,14 +531,14 @@ p {
   bottom: 50px;
   right: 50px;
   font-size: 50px;
-  color: var(--color-grey);
+  color: var(--color-light-grey);
   opacity: 0;
   pointer-events: none;
   transition: all 250ms ease-in-out;
 }
 .arrow-up.visible {
   opacity: 1;
-  pointer-events: unset;
+  pointer-events: auto;
 }
 .arrow-up:hover {
   color: var(--color-dark-main);

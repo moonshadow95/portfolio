@@ -57,7 +57,7 @@ const works = document.querySelector('.works__container');
 const worksHeght = works.getBoundingClientRect().height;
 const worksTop = window.pageYOffset + works.getBoundingClientRect().top;
 document.addEventListener('scroll', () => {
-  works.style.opacity = 1 - (window.scrollY - worksTop) / worksHeght;
+  works.style.opacity = 1.3 - (window.scrollY - worksTop) / worksHeght;
 });
 
 // Show Up Button
@@ -68,6 +68,11 @@ document.addEventListener('scroll', () => {
   } else {
     arrowUp.classList.remove('visible');
   }
+});
+
+// Handle click Arrow Button
+arrowUp.addEventListener('click', () => {
+  scrollIntoView('#home');
 });
 
 function scrollIntoView(selector) {
