@@ -102,7 +102,7 @@ p {
   background-color: transparent;
   align-items: center;
   color: var(--color-white);
-  padding: 16px;
+  padding: 0 16px;
   transition: all var(--animation-duration) ease-in-out;
 }
 #navbar.navbar--bg {
@@ -186,7 +186,7 @@ p {
 
 /* Section Common */
 .section {
-  padding: 50px;
+  padding: 80px 50px;
   text-align: center;
   margin: auto;
 }
@@ -440,6 +440,7 @@ p {
 /* Testimonials */
 #testimonials {
   background-color: var(--color-light-white);
+  overflow: hidden;
 }
 .testimonials {
   margin: 40px;
@@ -451,22 +452,25 @@ p {
 .testimonial__avatar {
   width: 150px;
   height: 150px;
-  border-radius: 50%;
-}
-.testimonial__avatar:nth-child(odd) {
   margin-right: 40px;
-}
-.testimonial__avatar:nth-child(even) {
-  margin-left: 40px;
-  order: 1;
+  border-radius: var(--size-border-radius);
 }
 .testimonial__speech-bubble {
   padding: 18px;
   background-color: var(--color-white);
-  border-radius: var(--size-border-radius);
+  border-radius: 20px;
+}
+.testimonial__speech-bubble:nth-child(odd) {
+  border-top-right-radius: 0;
+}
+.testimonial__speech-bubble:nth-child(even) {
+  border-top-left-radius: 0;
 }
 .testimonial__speech-bubble p {
   color: var(--color-light-grey);
+}
+.testimonial__speech-bubble p:first-child {
+  text-align: left;
 }
 .testimonial__speech-bubble a {
   color: var(--color-main);
@@ -501,6 +505,25 @@ p {
 .contact__moon {
   width: 30px;
   margin-left: 10px;
+}
+
+/* Up Button */
+.arrow-up {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  font-size: 50px;
+  color: var(--color-grey);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 250ms ease-in-out;
+}
+.arrow-up.visible {
+  opacity: 1;
+  pointer-events: unset;
+}
+.arrow-up:hover {
+  color: var(--color-dark-main);
 }
 
 /* For below 768px screen width */
