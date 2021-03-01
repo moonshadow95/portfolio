@@ -49,7 +49,11 @@ const skills = document.querySelector('.skills__container');
 const skillsHeght = skills.getBoundingClientRect().height;
 const skillsTop = window.pageYOffset + skills.getBoundingClientRect().top;
 document.addEventListener('scroll', () => {
-  skills.style.opacity = 1 - (window.scrollY - skillsTop) / skillsHeght;
+  if (window.outerWidth > 685) {
+    skills.style.opacity = 1.2 - (window.scrollY - skillsTop) / skillsHeght;
+  } else {
+    skills.style.opacity = 1.6 - (window.scrollY - skillsTop) / skillsHeght;
+  }
 });
 
 // Make works fade out as window scrolls down
@@ -57,7 +61,11 @@ const works = document.querySelector('.works__container');
 const worksHeght = works.getBoundingClientRect().height;
 const worksTop = window.pageYOffset + works.getBoundingClientRect().top;
 document.addEventListener('scroll', () => {
-  works.style.opacity = 1.3 - (window.scrollY - worksTop) / worksHeght;
+  if (window.outerWidth > 685) {
+    works.style.opacity = 1.3 - (window.scrollY - worksTop) / worksHeght;
+  } else {
+    works.style.opacity = 1.6 - (window.scrollY - worksTop) / worksHeght;
+  }
 });
 
 // Show Up Button
@@ -73,6 +81,29 @@ document.addEventListener('scroll', () => {
 // Handle click Arrow Button
 arrowUp.addEventListener('click', () => {
   scrollIntoView('#home');
+});
+
+// Projects filtering
+const workBtnContainer = document.querySelector('.works__categories');
+const projectContainer = document.querySelector('.works__projects');
+const projects = document.querySelectorAll('.project');
+workBtnContainer.addEventListener('click', (e) => {
+  const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
+  if (filter == null) {
+    return;
+  }
+  projectContainer.classList.add('animate-out');
+
+  setTimeout(() => {
+    projects.forEach((project) => {
+      if (filter === '*' || filter === project.dataset.type) {
+        project.classList.remove('invisible');
+      } else {
+        project.classList.add('invisible');
+      }
+    });
+    projectContainer.classList.remove('animate-out');
+  }, 300);
 });
 
 function scrollIntoView(selector) {
