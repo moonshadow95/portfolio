@@ -37,11 +37,15 @@ document.addEventListener('scroll', () => {
 });
 
 // Make about fade out as window scrolls down
-const about = document.querySelector('.about__container');
+const about = document.querySelector('.about__container--outer');
 const aboutHeght = about.getBoundingClientRect().height;
 const aboutTop = window.pageYOffset + about.getBoundingClientRect().top;
 document.addEventListener('scroll', () => {
-  about.style.opacity = 1 - (window.scrollY - aboutTop) / aboutHeght;
+  if (window.outerWidth > 685) {
+    about.style.opacity = 1 - (window.scrollY - aboutTop) / aboutHeght;
+  } else {
+    about.style.opacity = 1.4 - (window.scrollY - aboutTop) / aboutHeght;
+  }
 });
 
 // Make skills fade out as window scrolls down
@@ -92,8 +96,14 @@ workBtnContainer.addEventListener('click', (e) => {
   if (filter == null) {
     return;
   }
-  projectContainer.classList.add('animate-out');
+  // Remove Selection previous item and select the new one
+  const active = document.querySelector('.category__btn.selected');
+  active.classList.remove('selected');
+  const target =
+    e.target.nodeName === 'BUTTON' ? e.target : e.target.parentNode;
+  target.classList.add('selected');
 
+  projectContainer.classList.add('animate-out');
   setTimeout(() => {
     projects.forEach((project) => {
       if (filter === '*' || filter === project.dataset.type) {
