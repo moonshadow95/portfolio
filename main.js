@@ -20,7 +20,15 @@ navbarMenu.addEventListener('click', (event) => {
   if (link == null) {
     return;
   }
+  navbarMenu.classList.remove('open');
   scrollIntoView(link);
+});
+
+// Navbar menu show when click toggle button
+const navbarToggleBtn = document.querySelector('.navbar__toggle-btn');
+
+navbarToggleBtn.addEventListener('click', () => {
+  navbarMenu.classList.toggle('open');
 });
 
 // Handle scrolling home button
@@ -41,10 +49,10 @@ const about = document.querySelector('.about__container--outer');
 const aboutHeght = about.getBoundingClientRect().height;
 const aboutTop = window.pageYOffset + about.getBoundingClientRect().top;
 document.addEventListener('scroll', () => {
-  if (window.outerWidth > 685) {
-    about.style.opacity = 1 - (window.scrollY - aboutTop) / aboutHeght;
+  if (window.outerWidth > 700) {
+    about.style.opacity = 1.3 - (window.scrollY - aboutTop) / aboutHeght;
   } else {
-    about.style.opacity = 1.4 - (window.scrollY - aboutTop) / aboutHeght;
+    about.style.opacity = 1.5 - (window.scrollY - aboutTop) / aboutHeght;
   }
 });
 
@@ -53,10 +61,10 @@ const skills = document.querySelector('.skills__container');
 const skillsHeght = skills.getBoundingClientRect().height;
 const skillsTop = window.pageYOffset + skills.getBoundingClientRect().top;
 document.addEventListener('scroll', () => {
-  if (window.outerWidth > 685) {
-    skills.style.opacity = 1.2 - (window.scrollY - skillsTop) / skillsHeght;
+  if (window.outerWidth > 700) {
+    skills.style.opacity = 1.4 - (window.scrollY - skillsTop) / skillsHeght;
   } else {
-    skills.style.opacity = 1.6 - (window.scrollY - skillsTop) / skillsHeght;
+    skills.style.opacity = 1.5 - (window.scrollY - skillsTop) / skillsHeght;
   }
 });
 
@@ -65,14 +73,14 @@ const works = document.querySelector('.works__container');
 const worksHeght = works.getBoundingClientRect().height;
 const worksTop = window.pageYOffset + works.getBoundingClientRect().top;
 document.addEventListener('scroll', () => {
-  if (window.outerWidth > 685) {
-    works.style.opacity = 1.3 - (window.scrollY - worksTop) / worksHeght;
+  if (window.outerWidth > 700) {
+    works.style.opacity = 1.4 - (window.scrollY - worksTop) / worksHeght;
   } else {
     works.style.opacity = 1.6 - (window.scrollY - worksTop) / worksHeght;
   }
 });
 
-// Show Up Button
+// Show go to the top Button
 const arrowUp = document.querySelector('.arrow-up');
 document.addEventListener('scroll', () => {
   if (window.scrollY > homeHeight / 2) {
