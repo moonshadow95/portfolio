@@ -21,6 +21,7 @@ navbarMenu.addEventListener('click', (event) => {
     return;
   }
   navbarMenu.classList.remove('open');
+  navbarToggleBtn.classList.remove('open');
   scrollIntoView(link);
 });
 
@@ -29,6 +30,7 @@ const navbarToggleBtn = document.querySelector('.navbar__toggle-btn');
 
 navbarToggleBtn.addEventListener('click', () => {
   navbarMenu.classList.toggle('open');
+  navbarToggleBtn.classList.toggle('open');
 });
 
 // Handle scrolling home button
