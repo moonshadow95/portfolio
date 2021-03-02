@@ -289,6 +289,9 @@ p {
 .major__description {
   font-size: var(--font-small);
 }
+.about__education {
+  display: flex;
+}
 .education {
   display: flex;
   align-items: center;
@@ -299,9 +302,13 @@ p {
 .education__description {
   margin: 0 16px;
 }
+.education__name {
+  font-weight: var(--weight-bold);
+}
 .education__name,
 .education__period {
-  color: var(--color-light-grey);
+  text-align: left;
+  color: var(--color-grey);
 }
 .education__name {
   font-size: var(--font-small);
@@ -312,7 +319,12 @@ p {
 
 /* Skills */
 #skills {
-  background-color: var(--color-yellow);
+  background-color: var(--color-light-white);
+}
+#skills strong {
+  font-weight: var(--weight-semi-bold);
+  color: var(--color-light-white);
+  background: var(--color-light-grey);
 }
 .skillset {
   display: flex;
