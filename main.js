@@ -1,6 +1,6 @@
 'use strict';
 
-// Make navbar transparent it's on the top
+// Make navbar transparent when it's on the top
 const navbar = document.querySelector('#navbar');
 // 실제로 보여지는 높이를 가져오기 위해 getBoundingClientRect() 사용
 const navbarHeight = navbar.getBoundingClientRect().height;
@@ -14,6 +14,7 @@ document.addEventListener('scroll', () => {
 
 // Handle scrolling when click navbar menu
 const navbarMenu = document.querySelector('.navbar__menu');
+const navbarMenuItem = document.querySelector('.navbar__menu__item');
 navbarMenu.addEventListener('click', (event) => {
   const target = event.target;
   const link = target.dataset.link;
@@ -23,6 +24,7 @@ navbarMenu.addEventListener('click', (event) => {
   navbarMenu.classList.remove('open');
   navbarToggleBtn.classList.remove('open');
   scrollIntoView(link);
+  selectNavItem(target);
 });
 
 // Navbar menu show when click toggle button
@@ -126,7 +128,76 @@ workBtnContainer.addEventListener('click', (e) => {
   }, 300);
 });
 
+// 1. Get all sections and menu items
+// 2. Use IntersectionObserver to observe
+// 3. Activate the item corresponding to the section
+
+// id를 문자열 배열로 정리
+const sectionIds = [
+  '#home',
+  '#about',
+  '#skills',
+  '#works',
+  '#testimonials',
+  '#contact',
+];
+// 모든 섹션 요소들을 배열에 할당
+const sections = sectionIds.map((id) => document.querySelector(id));
+// 동일한 data-link를 가진 아이템들을 배열에 할당
+const navItems = sectionIds.map((id) =>
+  document.querySelector(`[data-link="${id}"]`)
+);
+let selectecNavIndex = 0;
+let selectedNavItem = navItems[0];
+function selectNavItem(selected) {
+  // 이전 활성화 된 아이템을 삭제
+  selectedNavItem.classList.remove('active');
+  // 새로 지정
+  selectedNavItem = selected;
+  selectedNavItem.classList.add('active');
+}
+
 function scrollIntoView(selector) {
   const scrollTo = document.querySelector(selector);
   scrollTo.scrollIntoView({ behavior: 'smooth' });
+  selectNavItem(navItems[sectionIds.indexOf(selector)]);
 }
+
+const observeOptions = {
+  root: null,
+  rootMargin: '0px',
+  threshold: 0.3,
+};
+
+const observerCallback = (entries, observer) => {
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting && entry.intersectionRatio > 0) {
+      const index = sectionIds.indexOf(`#${entry.target.id}`);
+      // Scrolling down and page up
+      if (entry.boundingClientRect.y < 0) {
+        selectecNavIndex = index + 1;
+      } else {
+        selectecNavIndex = index - 1;
+      }
+    }
+  });
+};
+
+// IntersectionObserver 사용
+const observer = new IntersectionObserver(observerCallback, observeOptions);
+sections.forEach((section) => observer.observe(section));
+
+// 사용자가 직접스크롤 할 때만 실행
+window.addEventListener('wheel', () => {
+  // 스크롤이 제일 위에 있으면 첫번째 아이템
+  if (window.scrollY === 0) {
+    selectecNavIndex = 0;
+  } else if (
+    // 스크롤이 제일 끝에 있으면 마지막 아이템
+    Math.round(window.scrollY + window.innerHeight) >=
+    document.body.clientHeight - 150
+  ) {
+    selectecNavIndex = navItems.length - 1;
+  }
+  selectNavItem(navItems[selectecNavIndex]);
+});
