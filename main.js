@@ -54,7 +54,7 @@ document.addEventListener('scroll', () => {
   if (window.outerWidth > 700) {
     about.style.opacity = 1.3 - (window.scrollY - aboutTop) / aboutHeght;
   } else {
-    about.style.opacity = 1.5 - (window.scrollY - aboutTop) / aboutHeght;
+    about.style.opacity = 1.6 - (window.scrollY - aboutTop) / aboutHeght;
   }
 });
 
