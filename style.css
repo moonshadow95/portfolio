@@ -154,7 +154,7 @@ p {
 }
 /* Home */
 #home {
-  background: url(images/home-background.png) center/cover no-repeat;
+  background: url(images/home-background-black.png) center/cover no-repeat;
   padding: 40px;
   padding-top: 100px;
   text-align: center;
