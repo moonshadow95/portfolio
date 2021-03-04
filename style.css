@@ -302,6 +302,7 @@ p {
 .major__title,
 .major__description {
   color: var(--color-text-white);
+  transition: all 150ms ease-in;
 }
 .major__description {
   font-size: var(--font-small);
@@ -613,7 +614,7 @@ p {
   color: var(--color-light-grey);
   opacity: 0;
   pointer-events: none;
-  transition: all 250ms ease-in-out;
+  transition: all 150ms ease-in;
 }
 .arrow-up.visible {
   opacity: 1;
@@ -621,6 +622,8 @@ p {
 }
 .arrow-up:hover {
   color: var(--color-yellow);
+  text-shadow: 0 0 0.4vw #e4c86d, 0 0 0.5vw #e4c86d, 0 0 0.5vw #e4c86d,
+    0 0 1.5vw #e4c86d, 0 0 0.1vw #e4c86d, 3px 3px 3px #806914;
 }
 
 /* For below 768px screen width */
@@ -720,6 +723,6 @@ p {
   .arrow-up {
     font-size: 35px;
     right: 10px;
-    bottom: 10px;
+    bottom: 40px;
   }
 }
