@@ -561,6 +561,7 @@ p {
 
 /* Contact */
 #contact {
+  position: relative;
   background-color: var(--color-main);
 }
 .contact__title,
@@ -603,6 +604,16 @@ p {
 .contact__moon {
   width: 30px;
   margin-left: 10px;
+}
+.lamppost-btn {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translateY(-45%);
+}
+.lamppost-btn img {
+  height: 300px;
 }
 
 /* Up Button */
