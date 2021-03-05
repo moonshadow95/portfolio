@@ -135,10 +135,9 @@ p {
 }
 .navbar__menu__item:hover,
 .navbar__menu__item.active {
-  animation: neon 1.5s linear infinite;
   color: var(--color-yellow);
   border-color: var(--color-dark-white);
-  text-shadow: 1px 1px 1px #bd9f3f, 0 0 10px;
+  text-shadow: 1px 1px 1px #bd9f3f, 0 0 5px;
 }
 /* Toggle btn */
 .navbar__toggle-btn {
@@ -200,7 +199,7 @@ p {
   animation: chevron 0.5s alternate infinite;
 }
 .home__btn:hover {
-  border-color: var(--color-yellow);
+  animation: neon 1.5s linear infinite;
 }
 
 /* Section Common */
@@ -594,7 +593,7 @@ p {
 }
 .contact__links i:hover {
   transform: scale(1.1);
-  color: var(--color-yellow);
+  animation: neon 1.5s linear infinite;
 }
 .contact__container {
   display: flex;
@@ -605,15 +604,42 @@ p {
   width: 30px;
   margin-left: 10px;
 }
+.lamppost__container {
+  position: absolute;
+  top: 15%;
+  left: 8%;
+  max-width: 500px;
+  max-height: 400px;
+  min-width: 100px;
+  min-height: 300px;
+}
+.lammpost__light {
+  background: linear-gradient(
+    #fcef3d38 10%,
+    #fcef3d46 15%,
+    #fcef3d4b 20%,
+    #fcef3d3f 40%,
+    #fcef3d3d 60%,
+    #d1ba5d00
+  );
+  position: absolute;
+  top: 13px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 160%;
+  height: 100%;
+  clip-path: polygon(32% 3%, 42% 1%, 67% 2%, 100% 100%, 0% 100%);
+}
 .lamppost-btn {
   display: block;
   position: absolute;
   top: 50%;
-  left: 5%;
-  transform: translateY(-45%);
+  left: 50%;
+  transform: translateY(-45%) translateX(-50%);
 }
 .lamppost-btn img {
-  height: 300px;
+  min-height: 200px;
+  max-height: 320px;
 }
 
 /* Up Button */

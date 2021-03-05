@@ -1,0 +1,422 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>지란지교 시큐리티</title>
+	<link rel="icon" href="img/favicon.ico">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="../../css/font-awesome.min.css">
+	<link rel="stylesheet" href="../../css/fonts.css">
+	<link rel="stylesheet" href="css/main.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="js/main.js"></script>
+</head>
+<body>
+<div class="skip_menu">
+	<a href="#main_wrap">본문 바로가기</a>
+	<a href="#gnb">주메뉴 바로가기</a>
+</div>
+<div id="wrap">
+	<div id="header_wrap">
+		<div class="top_header">
+			<div class="container">
+				<ul class="sns_list">
+					<li><a href="#"><img src="img/icon_facebook_pc.png" alt="페이스북"></a></li>
+					<li><a href="#"><img src="img/icon_blog_pc.png" alt="블로그"></a></li>
+					<li><a href="#"><img src="img/icon_youtube_pc.png" alt="유튜브"></a></li>
+				</ul>
+				<ul class="lang_list">
+					<li><a href="#">kor</a></li>
+					<li><a href="#">eng</a></li>
+					<li><a href="#">jpn</a></li>
+				</ul>
+			</div><!--.container end-->
+		</div><!--.top_header end-->
+		<div class="gnb_header">
+			<div class="container">
+				<h1><a href="#"><span class="blind">지란지교시큐리티</span></a></h1>
+				<ul id="gnb">
+					<li><a href="#">Product</a>
+						<ul class="gnb2">
+							<li><a href="#">악성코드/위협대응(무해화)</a>
+								<ul class="gnb3">
+									<li><a href="#">콘텐츠 악성코드 무해화</a></li>
+								</ul>
+							</li>
+							<li><a href="#">메일보안</a>
+								<ul class="gnb3">
+									<li><a href="#">이메일 통합 보안</a></li>
+									<li><a href="#">이메일 APT대응</a></li>
+									<li><a href="#">클라우드 이메일 보안 서비스</a></li>
+									<li><a href="#">이메일 DLP</a></li>
+									<li><a href="#">이메일 아카이빙</a></li>
+									<li><a href="#">악성 이메일 모의 훈련</a></li>
+								</ul>
+							</li>
+							<li><a href="#">문서보안</a>
+								<ul class="gnb3">
+									<li><a href="#">문서중앙화</a></li>
+									<li><a href="#">문서중앙화 클라우드</a></li>
+									<li><a href="#">보안파일서버</a></li>
+									<li><a href="#">보안파일서버 클라우드</a></li>
+									<li><a href="#">파일전송 결재시스템</a></li>
+									<li><a href="#">개인정보 문서중앙화</a></li>
+								</ul>
+							</li>
+							<li><a href="#">모바일 보안</a>
+								<ul class="gnb3">
+									<li><a href="#"></a></li>
+									<li><a href="#"></a></li>
+									<li><a href="#">EMM 솔루션</a></li>
+									<li><a href="#">앱·콘텐츠 보안 및 관리</a></li>
+									<li><a href="#">모바일 출입통제</a></li>
+									<li><a href="#">모바일 단말관리</a></li>
+									<li><a href="#">모바일 이메일 보안</a></li>
+									<li><a href="#">App 관련 부가 솔루션</a></li>
+									<li><a href="#">모바일 관련 솔루션</a></li>						
+								</ul>
+							</li>
+							<li><a href="#">블록체인</a>
+								<ul class="gnb3">
+									<li><a href="#">블록체인 기반 이메일 아카이빙</a></li>
+									<li><a href="#">암호화폐 보안</a></li>
+								</ul>
+							</li>
+							<li><a href="#">SDK</a>
+								<ul class="gnb3">
+									<li><a href="#">텍스트 추출 SDK</a></li>
+								</ul>
+							</li>
+						</ul>						
+					</li>
+					<li><a href="#">Support</a>
+						<ul class="gnb2">
+							<li><a href="#">최신 악성메일 트렌드</a></li>
+							<li><a href="#">제품문의</a></li>
+							<li><a href="#">다운로드</a></li>
+							<li><a href="#">Contact US</a></li>
+						</ul>
+					</li>
+					<li><a href="#">PR</a>
+							<ul class="gnb2">
+								<li><a href="#">뉴스 및 공지</a></li>
+								<li><a href="#">광고</a></li>
+								<li><a href="#">홍보영상</a></li>
+							</ul>					
+					</li>
+					<li><a href="#">IR</a>
+						<ul class="gnb2">
+							<li><a href="#">주가정보</a></li>
+							<li><a href="#">공시정보</a></li>
+							<li><a href="#">재무정보</a></li>
+							<li><a href="#">IR자료</a></li>
+							<li><a href="#">애널리스트 리포트</a></li>
+							<li><a href="#">규정</a></li>
+						</ul>										
+					</li>
+					<li><a href="#">JiranSecurity</a>
+						<ul class="gnb2">
+							<li><a href="#">회사소개</a></li>
+							<li><a href="#">CEO메시지</a></li>
+							<li><a href="#">연혁</a></li>
+							<li><a href="#">인증 및 수상</a></li>
+							<li><a href="#">고객사</a></li>
+							<li><a href="#">CI소개</a></li>
+							<li><a href="#">인재채용</a></li>
+							<li><a href="#">오시는길</a></li>						
+						</ul>										
+					</li>
+				</ul>
+				<div class="header_btn">
+					<button class="all_menu_btn"><span class="blind">전체메뉴 보기</span></button>
+					<button class="search_btn"><span class="blind">검색</span></button>
+				</div><!--header_btn end-->
+			</div><!--.container end-->
+			<div class="gnb_bg bg_1">
+				<div class="gnb_info product_info">
+					<p class="blind">깨끗하고 안전한 보안세상을 만드는 지란지교시큐리티의 솔루션을 소개합니다.</p>
+					<a href="#"><img src="img/btn_go_solution.png" alt="솔루션 맵 바로가기"></a>
+				</div> <!--.product_info-->
+			</div>
+			<div class="gnb_bg bg_2">
+				<div class="gnb_info support_info">
+					<strong>Support</strong>
+					<p>지금 필요한 정보를 가장 빠르게 찾는 방법!<br>Support에서 확인하세요.</p>
+				</div>
+			</div>
+			<div class="gnb_bg bg_3">
+				<div class="gnb_info pr_info">
+					<strong>PR</strong>
+					<p class="pr_tit">신제품 출시</p>
+					<p class="pr_desc">콘텐츠 악성코드 무해화<br>SaniTOX 출시됐어요!</p>
+					<a href="#"><img src="img/btn_go_pr.png" alt="saniTOX"></a>
+				</div>
+			</div>
+			<div class="gnb_bg bg_4">
+				<div class="gnb_info ir_info">
+					<strong>IR</strong>
+					<p>지란지교시큐리티의 미래 가치,<br>기업 투자정보를 제공합니다.</p>
+				</div>
+			</div>
+			<div class="gnb_bg bg_5">
+				<div class="gnb_info jiran_info">
+					<strong>JiranSecurity</strong>
+					<p>착한SW, 따뜻한 보안<br>우리는 지란지교시큐리티입니다</p>
+				</div>
+			</div>
+			<div class="all_menu bk_bg">
+				<div class="container">
+					<ul class="all_1">
+						<li><a href="#">Products</a>
+							<ul class="all_2">
+								<li><a href="#">솔루션맵</a></li>
+								<li><a href="#">악성코드/위협대응(무해화)</a>
+									<ul class="all_3">
+										<li><a href="#">콘텐츠 악성코드 무해화</a></li>
+									</ul>
+								</li>
+								<li><a href="#">메일보안</a>
+									<ul class="all_3">
+										<li><a href="#">이메일 통합 보안</a></li>
+										<li><a href="#">이메일 APT대응</a></li>
+										<li><a href="#">클라우드 이메일 보안 서비스</a></li>
+										<li><a href="#">이메일 DLP</a></li>
+										<li><a href="#">이메일 아카이빙</a></li>
+										<li><a href="#">악성 이메일 모의 훈련</a></li>
+									</ul>
+								</li>
+								<li><a href="#">문서보안</a>
+									<ul class="all_3">
+										<li><a href="#">문서중앙화</a></li>
+										<li><a href="#">문서중앙화 클라우드</a></li>
+										<li><a href="#">보안파일서버</a></li>
+										<li><a href="#">보안파일서버 클라우드</a></li>
+										<li><a href="#">파일전송 결재시스템</a></li>
+										<li><a href="#">개인정보 문서중앙화</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li><a href="#">Products</a>
+							<ul class="all_2">
+								<li><a href="#">모바일 보안</a>
+									<ul class="all_3">
+										<li><a href="#"></a></li>
+										<li><a href="#"></a></li>
+										<li><a href="#">EMM 솔루션</a></li>
+										<li><a href="#">앱·콘텐츠 보안 및 관리</a></li>
+										<li><a href="#">모바일 출입통제</a></li>
+										<li><a href="#">모바일 단말관리</a></li>
+										<li><a href="#">모바일 이메일 보안</a></li>
+										<li><a href="#">App 관련 부가 솔루션</a></li>
+										<li><a href="#">모바일 관련 솔루션</a></li>						
+									</ul>
+								</li>
+								<li><a href="#">블록체인</a>
+									<ul class="all_3">
+										<li><a href="#">블록체인 기반 이메일 아카이빙</a></li>
+										<li><a href="#">암호화폐 보안</a></li>
+									</ul>
+								</li>
+								<li><a href="#">SDK</a>
+									<ul class="all_3">
+										<li><a href="#">텍스트 추출 SDK</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li><a href="#">Support</a>
+							<ul class="all_2">
+								<li><a href="#">최신 악성메일 트렌드</a></li>
+								<li><a href="#">제품문의</a></li>
+								<li><a href="#">다운로드</a></li>
+								<li><a href="#">Contact Us</a></li>
+							</ul>
+						</li>
+						<li><a href="#">PR</a>
+							<ul class="all_2">
+								<li><a href="#">뉴스 및 공지</a></li>
+								<li><a href="#">광고</a></li>
+								<li><a href="#">홍보영상</a></li>
+								<li><a href="#">이벤트</a></li>
+							</ul>
+						</li>
+						<li><a href="#">IR</a>
+							<ul class="all_2">
+								<li><a href="#">주가정보</a></li>
+								<li><a href="#">공시정보</a></li>
+								<li><a href="#">재무정보</a></li>
+								<li><a href="#">IR자료</a></li>
+								<li><a href="#">애널리스트 리포트</a></li>
+								<li><a href="#">규정</a></li>
+							</ul>
+						</li>
+						<li><a href="#">JiranSecurity</a>
+							<ul class="all_2">
+								<li><a href="#">회사소개</a></li>
+								<li><a href="#">CEO메시지</a></li>
+								<li><a href="#">연혁</a></li>
+								<li><a href="#">인증 및 수상</a></li>
+								<li><a href="#">고객사</a></li>
+								<li><a href="#">CI소개</a></li>
+								<li><a href="#">인재채용</a></li>
+								<li><a href="#">오시는길</a></li>
+							</ul>
+						</li>
+					</ul>
+					<button class="close_btn"><i class="fa fa-times" aria-hidden="true"></i></button>
+				</div><!--container end-->
+			</div><!--all_menu bk_bg end-->
+			<div class="search_wrap bk_bg">
+				<div class="container">
+					<form action="">
+						<input type="text" placeholder="검색어를 입력하세요">
+						<input type="image" src="img/btn_search.png" alt="검색">
+					</form>
+					<button class="close_btn"><i class="fa fa-times" aria-hidden="true"></i></button>
+				</div><!--container end-->
+			</div><!--search_wrap bk_bg end-->
+		</div><!--.gnb_header end-->
+	</div><!--#header_wrap end-->
+	<div id="main_wrap">
+		<div class="key_vis">
+			<div class="container">
+				<img src="img/main_visual.gif" alt="사이버보안의 새로운 길, 지란지교시큐리티가 만들어 갑니다." class="main_vis">
+				<img src="img/m_main_visual.gif" alt="사이버보안의 새로운 길, 지란지교시큐리티가 만들어 갑니다." class="m_vis">
+			</div><!--.container end-->
+		</div><!--.key_vis end-->
+		<div class="quick_menu">
+			<div class="container">
+				<ul>
+					<li><a href="#">
+						<img src="img/icon_01.png" alt="">
+						<span>최신 악성메일 트렌드</span>
+					</a></li>
+					<li><a href="#">
+						<img src="img/icon_02.png" alt="">
+						<span>솔루션맵</span>
+					</a></li>
+					<li><a href="#">
+						<img src="img/icon_03.png" alt="">
+						<span>주가정보</span>
+					</a></li>
+					<li><a href="#">
+						<img src="img/icon_04.png" alt="">
+						<span>인재채용</span>
+					</a></li>
+					<li><a href="#">
+						<img src="img/icon_05.png" alt="">
+						<span>다운로드</span>
+					</a></li>
+					<li><a href="#">
+						<img src="img/icon_06.png" alt="">
+						<span>제품문의</span>
+					</a></li>
+				</ul>
+			</div><!--.container end-->
+		</div><!--.quick_menu end-->
+		<div class="banner_row">
+			<div class="container">
+				<div class="banner_wrap">
+					<ul>
+						<li><a href="#"><img src="img/banner_1.jpg" alt="JS 솔루션 가이드"></a></li>
+						<li><a href="#"><img src="img/banner_2.jpg" alt="최신 악성메일 트렌드 사이트 오픈"></a></li>
+						<li><a href="#"><img src="img/banner_3.jpg" alt="..."></a></li>
+						<li><a href="#"><img src="img/banner_4.jpg" alt="..."></a></li>
+						<li><a href="#"><img src="img/banner_5.jpg" alt="..."></a></li>
+					</ul>
+					<div class="banner_controler">
+						<button class="prev_num">&lt; <span>1</span></button>
+						<span> / </span>
+						<button class="next_num"><span>5</span>&gt;</button>
+					</div>
+				</div>
+				<div class="board_wrap">
+					<div class="board">
+						<h2 class="b_news">News</h2>
+						<ul>
+							<li><a href="#">[보도자료] 지란지교시큐리티, 에스에스알 악성 이메일 모의훈련 솔루션 사업 인수로 이메일 보안 사업 강화</a></li>
+							<li><a href="#">[보도자료] 지란지교 시큐리티, 코로나19 악용한 피싱메일 기승</a></li>
+						</ul>
+					</div>
+					<div class="board">
+						<h2 class="b_event">event</h2>
+						<ul>
+							<li><a href="#">[무상지원이벤트] 코로나19 극복 응원! 재택근무 시행 중소기업에 문서중앙화</a></li>
+						</ul>
+					</div>
+					<div class="board">
+						<h2 class="b_sns">sns</h2>
+						<ul>
+							<li><a href="#">지란지교시큐리티, 가트너 보고서에 솔루션 벤더로 등재!</a></li>
+						</ul>
+					</div>
+					<div class="board">
+						<h2 class="b_mi">mi</h2>
+						<ul>
+							<li><a href="#">[리포트S] 기반 시설을 노리는 위협들</a></li>
+						</ul>
+					</div>
+				</div>
+			</div><!--.container end-->
+		</div><!--.banner_row end-->
+	</div><!--#main_wrap end-->
+	<div id="footer_wrap">
+		<div class="footer_menu">	
+			<div class="container">
+				<ul>
+					<li class="fm_1"><a href="#">개인정보취급방침</a></li>
+					<li><img src="img/icon_mi.png" alt=""><a href="#">마켓인텔리전스</a></li>
+					<li><img src="img/icon_withyou.png" alt=""><a href="#">윤리경영</a></li>
+					<li><img src="img/icon_pcp.png" alt=""><a href="#">파트너포털</a></li>
+				</ul>
+			</div><!--.container end-->
+		</div><!--.footer_menu end-->
+		<div class="corp_info">
+			<div class="family_site f_m">
+					<button>FAMILY SITE</button>
+					<ul>
+						<li><a href="#">Jiransoft</a></li>
+						<li><a href="#">Jiransoft</a></li>
+						<li><a href="#">Jiransoft</a></li>
+						<li><a href="#">Jiransoft</a></li>
+						<li><a href="#">Jiransoft</a></li>
+						<li><a href="#">Jiransoft</a></li>
+					</ul>
+				</div>
+			<div class="container">
+				<ul class="foot_sns">
+					<li><a href="#"><img src="img/ico_facebook.png" alt="페이스북"></a></li>
+					<li><a href="#"><img src="img/ico_blog.png" alt="블로그"></a></li>
+					<li><a href="#"><img src="img/icon_youtube.png" alt="유튜브"></a></li>
+				</ul>
+				<address>
+					대표자명 : 윤두식  |  사업자등록번호 : 107-88-31670  | <span>대표전화 : 02-569-6110  |  팩스 : 02-569-6117</span>
+				</address>
+				<p>
+					<span>서울 : (06187) 서울특별시 강남구 역삼로 542 신사S&G빌딩 5층</span>
+					<span>대전 : (34016) 대전광역시 유성구 테크노3로 65 한신S메카 518호</span>
+					<span>부산 : (48058) 부산광역시 해운대구 센텀서로 30 KNN빌딩 1501호</span>
+				</p>
+				<p class="copyright">Copyright&copy;JiranSecurity. All Rights Reserved</p>
+				<div class="family_site f_pc">
+					<button>FAMILY SITE</button>
+					<ul>
+						<li><a href="#">Jiransoft</a></li>
+						<li><a href="#">Jiransoft</a></li>
+						<li><a href="#">Jiransoft</a></li>
+						<li><a href="#">Jiransoft</a></li>
+						<li><a href="#">Jiransoft</a></li>
+						<li><a href="#">Jiransoft</a></li>
+					</ul>
+				</div>
+			</div><!--.container end-->
+		</div><!--.corp_info end-->
+		<button class="go_top">
+			<img src="img/btn_top.png" alt="맨위로">
+		</button>
+	</div><!--#footer_wrap end-->
+</div><!--#wrap end-->
+</body>
+</html>

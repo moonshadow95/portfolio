@@ -1,0 +1,52 @@
+@charset "utf-8";
+
+/*Common*/
+body {margin-bottom: 500px;}
+#wrap {}
+.container {
+	width: 980px;margin: auto;height: 100%;
+	background: rgba(255,0,0,0.5);
+}
+
+/*Header*/
+#header_wrap {
+	padding: 13px 0 27px 0;height: 60px;
+	background: orange;
+}
+
+/*Main*/
+#main_wrap {}
+.visual_row {height: 550px;background: green;}
+.notice_row {
+	padding: 13px 0;margin-top: -40px;
+	height: 14px;background: rgba(0,0,0,0.7);
+	border-top: 1px dashed #000;color:#FFF;
+}
+.content_row {
+	padding: 30px 0;height: 140px;background: skyblue;
+}
+.content {
+	width: 300px;height: 140px;float: left;
+	background: yellow;margin-right: 40px;
+}
+.content:last-child {float: right;margin-right: 0;}
+
+.sns_row {
+	padding: 30px 0;height: 190px;background: beige;
+}
+.sns1 {
+	width: 400px;height: 190px;margin-right: 20px;
+	background: DarkSlateBlue;float: left;
+}
+.sns2 {
+	width: 140px;height: 190px;float: right;
+	background: DarkSlateBlue;
+}
+
+/*Footer*/
+#footer_wrap {}
+.footer_menu {}
+.corp_info {}
+
+
+

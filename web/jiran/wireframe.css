@@ -1,0 +1,41 @@
+@charset "utf-8";
+
+/*common*/
+#wrap {}
+.container {
+	width: 1200px;margin: auto;
+	background: rgba(255,0,0,0.5);
+}
+.container:after {content:"";clear: both;display: block;}
+
+
+/*header*/
+#header_wrap {background: pink;}
+.top_header {height: 30px;}
+.gnb_header {height: 85px;}
+
+/*main*/
+#main_wrap {background: silver;}
+.key_vis {height: 500px;}
+.quick_menu {height: 180px;}
+.banner_row {}
+.banner {
+	width: 590px;height: 260px;float: left;
+	background: orange;
+}
+.board {
+	width: 590px;height: 260px;float: right;
+	background: lightblue;
+}
+
+/*footer*/
+#footer_wrap {background: green;}
+.footer_menu {height: 55px;}
+.corp_info {height: 210px;}
+
+
+
+
+
+
+
