@@ -1,11 +1,6 @@
 /* Global */
 
 :root {
-  /* Color */
-  /* highlite #FFEBA8 */
-  /* main #0E0C22 */
-  /* light main #444444 */
-  /* dark main #222 */
   --color-text-white: #c9d1d9;
   --color-light-white: #eeeeee;
   --color-dark-white: #bdbdbd;
@@ -43,6 +38,7 @@
   box-sizing: border-box;
   letter-spacing: -0.25px;
 }
+
 body {
   color: var(--color-black);
   margin: 0;
@@ -161,7 +157,7 @@ p {
 }
 /* Home */
 #home {
-  background: url(images/home-background-black.png) center/cover no-repeat;
+  background: url(images/home-background-dark.png) center/cover no-repeat;
   padding: 40px;
   padding-top: 100px;
   text-align: center;
@@ -184,6 +180,7 @@ p {
   padding: 8px 12px;
   border: 2px solid var(--color-text-white);
   border-radius: var(--size-border-radius);
+  transition: all var(--animation-duration) ease-in;
 }
 @keyframes chevron {
   0% {
@@ -199,7 +196,8 @@ p {
   animation: chevron 0.5s alternate infinite;
 }
 .home__btn:hover {
-  animation: neon 1.5s linear infinite;
+  color: var(--color-yellow);
+  text-shadow: 1px 1px 1px #bd9f3f, 0 0 5px;
 }
 
 /* Section Common */
@@ -629,6 +627,44 @@ p {
   width: 160%;
   height: 100%;
   clip-path: polygon(32% 3%, 42% 1%, 67% 2%, 100% 100%, 0% 100%);
+  animation: flicker-on 2s ease-in-out forwards;
+}
+.lammpost__light.light-off {
+  animation: flicker-off 2s ease-in-out forwards;
+}
+@keyframes flicker-off {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes flicker-on {
+  0% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 .lamppost-btn {
   display: block;
@@ -641,7 +677,6 @@ p {
   min-height: 200px;
   max-height: 320px;
 }
-
 /* Up Button */
 .arrow-up {
   position: fixed;

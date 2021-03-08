@@ -201,3 +201,19 @@ window.addEventListener('wheel', () => {
   }
   selectNavItem(navItems[selectecNavIndex]);
 });
+
+// Lammpost
+const lamppost = document.querySelector('.lamppost-btn');
+const lamppostLight = document.querySelector('.lammpost__light');
+lamppost.addEventListener('click', () => {
+  lamppostLight.classList.toggle('light-off');
+  lightTheme();
+});
+
+// Light Theme
+// function lightTheme() {
+//   document.documentElement.style.setProperty('--color-main', '#a39cff');
+//   document.documentElement.style.setProperty('--color-light-main', '#d7cdff');
+//   document.documentElement.style.setProperty('--color-dark-main', '#716ecb');
+//   document.documentElement.style.setProperty('--color-text-white;', '#222');
+// }
