@@ -1,5 +1,4 @@
 /* Global */
-
 :root {
   --color-text: #c9d1d9;
   --color-text-white: #f8f8f8;
@@ -18,26 +17,9 @@
   --color-icon: #c9d1d9;
   --color-text-body: #222222;
   --color-body-background: #06090f;
-  /* --color-text: #2e2e2e;
-  --color-text-white: #f8f8f8;
-  --color-text-shadow: #bd9f3f;
-  --color-text-body: #222222;
-  --color-title: #0f0f0f;
-  --color-main: #273c75;
-  --color-dark-main: #192a56;
-  --color-icon: #192a56;
-  --color-body-background: #fff;
-  --color-light-background: #f5f6fa;
-  --color-lighter-background: rgba(224, 224, 224, 0.5);
-  --color-border: #979797;
-  --color-dark-grey: #4d4d4d;
-  --color-grey: #616161;
-  --color-light-grey: #7c7979;
-  --color-text-black: #222;
-  --color-highlight: #f3c64b; */
 
   /* Font size */
-  --font-large: 48px;
+  --font-large: 52px;
   --font-medium: 28px;
   --font-regular: 18px;
   --font-small: 16px;
@@ -59,7 +41,7 @@
 /* Font family */
 @font-face {
   font-family: 'NEON';
-  src: url(font/Neoneon.otf) format('opentype');
+  src: url(font/Neon.ttf) format('truetype');
 }
 
 /* Universal tags */
@@ -93,13 +75,18 @@ button {
   border: none;
   outline: none;
 }
-/* Typography */
 
+/* Typography */
 h1 {
   font-size: var(--font-large);
   font-weight: var(--weight-bold);
   color: var(--color-title);
   margin: 16px 0px;
+  font-family: 'NEON';
+}
+h1.on {
+  text-shadow: 0 0 2vw var(--color-highlight);
+  animation: neon 1.5s ease infinite;
 }
 
 h2 {
@@ -136,6 +123,7 @@ p {
   color: var(--color-text-white);
   padding: 0 16px;
   transition: all var(--animation-duration) ease-in;
+  font-family: 'NEON';
 }
 #navbar.navbar--bg {
   background-color: var(--color-main);
@@ -147,7 +135,6 @@ p {
   text-shadow: 1px 1px 1px var(--color-text-shadow), 0 0 5px;
 }
 .navbar__logo a {
-  font-size: var(--font-regular);
   color: var(--color-text-white);
   font-family: 'NEON';
   font-size: var(--font-medium);
@@ -165,6 +152,7 @@ p {
   border-radius: var(--size-border-radius);
   border: 1px solid transparent;
   transition: all var(--animation-duration) ease-in;
+  font-size: var(--font-regular);
 }
 .navbar__menu__item:hover,
 .navbar__menu__item.active {
@@ -172,6 +160,7 @@ p {
   border-color: var(--color-border);
   text-shadow: 1px 1px 1px var(--color-text-shadow), 0 0 5px;
 }
+
 /* Toggle btn */
 .navbar__toggle-btn {
   position: absolute;
@@ -192,6 +181,7 @@ p {
   border-radius: 4px;
   transition: all 200ms ease-in-out;
 }
+
 /* Home */
 #home {
   background: url(images/home-background-dark.png) center/cover no-repeat;
@@ -208,6 +198,9 @@ p {
 .home__title,
 .home__description {
   color: var(--color-text-white);
+  font-family: inherit;
+  text-shadow: none;
+  animation: none;
 }
 .home__btn {
   color: var(--color-text-white);
@@ -218,6 +211,7 @@ p {
   border: 2px solid var(--color-border);
   border-radius: var(--size-border-radius);
   transition: all var(--animation-duration) ease-in;
+  font-family: 'NEON';
 }
 @keyframes chevron {
   0% {
@@ -301,6 +295,7 @@ p {
   display: flex;
   justify-content: space-between;
   margin: 80px 0;
+  font-family: 'NEON';
 }
 .major:hover .major__title {
   text-shadow: 0 0 0.2vw #dbbd58, 0 0 0.25vw #dbbd58, 0 0 0.25vw #dbbd58,
@@ -441,6 +436,7 @@ p {
   transition: all var(--animation-duration) ease-in;
   background-color: var(--color-body-background);
   color: var(--color-text);
+  font-family: 'NEON';
 }
 .category__btn.selected,
 .category__btn:hover {
@@ -613,8 +609,6 @@ p {
 }
 .contact__title {
   margin: 32px 0;
-  text-shadow: 0 0 2vw var(--color-highlight);
-  animation: neon 1.5s ease infinite;
 }
 @keyframes neon {
   0%,
@@ -642,25 +636,27 @@ p {
   animation: neon 1.5s linear infinite;
 }
 .contact__container {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 5;
 }
 .contact__moon {
-  width: 30px;
+  width: 60px;
   margin-left: 10px;
 }
 .lamppost__container {
   position: absolute;
-  top: 15%;
-  left: 8%;
+  bottom: 0;
+  right: 10%;
   max-width: 500px;
   max-height: 400px;
   min-width: 100px;
-  min-height: 300px;
+  min-height: 200px;
 }
 .lammpost__light {
-  background: linear-gradient(
+  background: radial-gradient(
     #fcef3d38 10%,
     #fcef3d46 15%,
     #fcef3d4b 20%,
@@ -669,16 +665,29 @@ p {
     #d1ba5d00
   );
   position: absolute;
-  top: 13px;
+  top: -20px;
   left: 50%;
   transform: translateX(-50%);
-  width: 160%;
-  height: 100%;
-  clip-path: polygon(32% 3%, 42% 1%, 67% 2%, 100% 100%, 0% 100%);
+  width: 150%;
+  height: 40%;
+  border-radius: 50%;
+  filter: blur(25px);
   animation: flicker-on 2s ease-in-out forwards;
 }
 .lammpost__light.light-off {
   animation: flicker-off 2s ease-in-out forwards;
+}
+.lammpost__shadow {
+  background: radial-gradient(rgb(0, 0, 0), rgb(49, 49, 49));
+  position: absolute;
+  bottom: -7px;
+  left: 49%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 10%;
+  border-radius: 50%;
+  filter: blur(5px);
+  z-index: -1;
 }
 @keyframes flicker-off {
   0% {
@@ -717,13 +726,12 @@ p {
 .lamppost-btn {
   display: block;
   position: absolute;
-  top: 50%;
+  top: -70px;
   left: 50%;
   transform: translateY(-45%) translateX(-50%);
 }
 .lamppost-btn img {
-  min-height: 200px;
-  max-height: 320px;
+  height: 300px;
 }
 /* Up Button */
 .arrow-up {
@@ -844,5 +852,15 @@ p {
     font-size: 35px;
     right: 10px;
     bottom: 40px;
+  }
+  .lamppost-btn {
+    display: block;
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateY(-45%) translateX(-50%);
+  }
+  .lamppost-btn img {
+    height: 200px;
   }
 }

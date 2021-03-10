@@ -41,14 +41,14 @@ homeBtn.addEventListener('click', () => {
   scrollIntoView('#about');
 });
 
-// Make sections fade out as window scrolls down
+// Make #Home fade out as window scrolls down
 const home = document.querySelector('.home__container');
 const homeHeight = home.getBoundingClientRect().height;
 document.addEventListener('scroll', () => {
   home.style.opacity = 1 - window.scrollY / homeHeight;
 });
 
-// Make about fade out as window scrolls down
+// Make #About fade out as window scrolls down
 const about = document.querySelector('.about__container--outer');
 const aboutHeght = about.getBoundingClientRect().height;
 const aboutTop = window.pageYOffset + about.getBoundingClientRect().top;
@@ -60,7 +60,7 @@ document.addEventListener('scroll', () => {
   }
 });
 
-// Make skills fade out as window scrolls down
+// Make #Skills fade out as window scrolls down
 const skills = document.querySelector('.skills__container');
 const skillsHeght = skills.getBoundingClientRect().height;
 const skillsTop = window.pageYOffset + skills.getBoundingClientRect().top;
@@ -72,7 +72,7 @@ document.addEventListener('scroll', () => {
   }
 });
 
-// Make works fade out as window scrolls down
+// Make #Works fade out as window scrolls down
 const works = document.querySelector('.works__container');
 const worksHeght = works.getBoundingClientRect().height;
 const worksTop = window.pageYOffset + works.getBoundingClientRect().top;
