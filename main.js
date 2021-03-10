@@ -206,14 +206,57 @@ window.addEventListener('wheel', () => {
 const lamppost = document.querySelector('.lamppost-btn');
 const lamppostLight = document.querySelector('.lammpost__light');
 lamppost.addEventListener('click', () => {
+  themeChange();
   lamppostLight.classList.toggle('light-off');
-  lightTheme();
 });
 
-// Light Theme
-// function lightTheme() {
-//   document.documentElement.style.setProperty('--color-main', '#a39cff');
-//   document.documentElement.style.setProperty('--color-light-main', '#d7cdff');
-//   document.documentElement.style.setProperty('--color-dark-main', '#716ecb');
-//   document.documentElement.style.setProperty('--color-text-white;', '#222');
-// }
+// Theme change
+function themeChange() {
+  if (lamppostLight.classList.contains('light-off')) {
+    darkTheme();
+  } else {
+    lightTheme();
+  }
+}
+function lightTheme() {
+  document.querySelector('#home').style.backgroundImage =
+    'url(images/home-background-light.png)';
+  document.documentElement.style.setProperty('--color-text', '#2e2e2e');
+  document.documentElement.style.setProperty('--color-title', '#0f0f0f');
+  document.documentElement.style.setProperty('--color-main', '#273c75');
+  document.documentElement.style.setProperty('--color-dark-main', '#192a56');
+  document.documentElement.style.setProperty('--color-icon', '#192a56');
+  document.documentElement.style.setProperty('--color-body-background', '#fff');
+  document.documentElement.style.setProperty(
+    '--color-light-background',
+    '#f5f6fa'
+  );
+  document.documentElement.style.setProperty(
+    '--color-lighter-background',
+    'rgba(224, 224, 224, 0.5)'
+  );
+  document.documentElement.style.setProperty('--color-highlight', '#f3c64b');
+}
+
+function darkTheme() {
+  document.querySelector('#home').style.backgroundImage =
+    'url(images/home-background-dark.png)';
+  document.documentElement.style.setProperty('--color-text', '#c9d1d9');
+  document.documentElement.style.setProperty('--color-title', '#eeeeee');
+  document.documentElement.style.setProperty('--color-main', '#0a0e1a');
+  document.documentElement.style.setProperty('--color-dark-main', '#06090f');
+  document.documentElement.style.setProperty('--color-icon', '#c9d1d9');
+  document.documentElement.style.setProperty(
+    '--color-body-background',
+    '#06090f'
+  );
+  document.documentElement.style.setProperty(
+    '--color-light-background',
+    '#0d1117'
+  );
+  document.documentElement.style.setProperty(
+    '--color-lighter-background',
+    'rgba(151, 151, 151, 0.5)'
+  );
+  document.documentElement.style.setProperty('--color-highlight', '#ffeba8');
+}
