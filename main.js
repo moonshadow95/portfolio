@@ -14,7 +14,6 @@ document.addEventListener('scroll', () => {
 
 // Handle scrolling when click navbar menu
 const navbarMenu = document.querySelector('.navbar__menu');
-const navbarMenuItem = document.querySelector('.navbar__menu__item');
 navbarMenu.addEventListener('click', (event) => {
   const target = event.target;
   const link = target.dataset.link;
@@ -147,7 +146,7 @@ const sections = sectionIds.map((id) => document.querySelector(id));
 const navItems = sectionIds.map((id) =>
   document.querySelector(`[data-link="${id}"]`)
 );
-let selectecNavIndex = 0;
+let selectedNavIndex = 0;
 let selectedNavItem = navItems[0];
 function selectNavItem(selected) {
   // 이전 활성화 된 아이템을 삭제
@@ -175,14 +174,13 @@ const observerCallback = (entries, observer) => {
       const index = sectionIds.indexOf(`#${entry.target.id}`);
       // Scrolling down and page up
       if (entry.boundingClientRect.y < 0) {
-        selectecNavIndex = index + 1;
+        selectedNavIndex = index + 1;
       } else {
-        selectecNavIndex = index - 1;
+        selectedNavIndex = index - 1;
       }
     }
   });
 };
-
 // IntersectionObserver 사용
 const observer = new IntersectionObserver(observerCallback, observeOptions);
 sections.forEach((section) => observer.observe(section));
@@ -191,15 +189,15 @@ sections.forEach((section) => observer.observe(section));
 window.addEventListener('wheel', () => {
   // 스크롤이 제일 위에 있으면 첫번째 아이템
   if (window.scrollY === 0) {
-    selectecNavIndex = 0;
+    selectedNavIndex = 0;
   } else if (
     // 스크롤이 제일 끝에 있으면 마지막 아이템
     Math.round(window.scrollY + window.innerHeight) >=
     document.body.clientHeight - 150
   ) {
-    selectecNavIndex = navItems.length - 1;
+    selectedNavIndex = navItems.length - 1;
   }
-  selectNavItem(navItems[selectecNavIndex]);
+  selectNavItem(navItems[selectedNavIndex]);
 });
 
 // Lammpost
@@ -211,6 +209,13 @@ lamppost.addEventListener('click', () => {
 });
 
 // Theme change
+const navbarMenuItem = document.querySelectorAll('.navbar__menu__item');
+const majors = document.querySelectorAll('.major__title');
+const categoryBtn = document.querySelectorAll('.category__btn');
+const contactGit = document.querySelector('.contact__links');
+const sectionTitles = document.querySelectorAll('section');
+const elements = [navbarMenuItem, majors, categoryBtn, sectionTitles];
+
 function themeChange() {
   if (lamppostLight.classList.contains('light-off')) {
     darkTheme();
@@ -236,6 +241,14 @@ function lightTheme() {
     'rgba(224, 224, 224, 0.5)'
   );
   document.documentElement.style.setProperty('--color-highlight', '#f3c64b');
+  elements.forEach((item) => {
+    item.forEach((item) => {
+      item.classList.replace('dark__theme', 'light__theme');
+    });
+  });
+  homeBtn.classList.replace('dark__theme', 'light__theme');
+  arrowUp.classList.replace('dark__theme', 'light__theme');
+  contactGit.classList.replace('dark__theme', 'light__theme');
 }
 
 function darkTheme() {
@@ -259,4 +272,13 @@ function darkTheme() {
     'rgba(151, 151, 151, 0.5)'
   );
   document.documentElement.style.setProperty('--color-highlight', '#ffeba8');
+
+  elements.forEach((item) => {
+    item.forEach((item) => {
+      item.classList.replace('light__theme', 'dark__theme');
+    });
+  });
+  homeBtn.classList.replace('light__theme', 'dark__theme');
+  arrowUp.classList.replace('light__theme', 'dark__theme');
+  contactGit.classList.replace('light__theme', 'dark__theme');
 }
