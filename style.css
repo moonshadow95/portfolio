@@ -137,14 +137,6 @@ p {
     transform: translateY(1px);
   }
 }
-.home__btn i {
-  font-size: var(--font-micro);
-  margin-left: 5px;
-  animation: chevron 0.5s alternate infinite;
-}
-.home__btn:hover {
-  color: var(--color-highlight);
-}
 @keyframes flicker-off {
   0% {
     opacity: 0;
@@ -298,7 +290,14 @@ p {
   transition: all var(--animation-duration) ease-in;
   font-family: 'NEON';
 }
-
+.home__btn i {
+  font-size: var(--font-micro);
+  margin-left: 5px;
+  animation: chevron 0.5s alternate infinite;
+}
+.home__btn:hover {
+  color: var(--color-highlight);
+}
 /* Section Common */
 .section {
   padding: 80px 50px;
