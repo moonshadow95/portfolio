@@ -449,11 +449,11 @@ p {
 .skillset {
   display: flex;
   background-color: var(--color-light-grey);
-  color: var(--color-title);
+  color: var(--color-text-white);
   margin: 20px 50px;
 }
 .skillset__title {
-  color: var(--color-text);
+  color: var(--color-text-white);
 }
 .skillset__left {
   flex-basis: 60%;
